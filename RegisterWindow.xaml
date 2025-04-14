@@ -1,0 +1,58 @@
+﻿<Window x:Class="ShopProductManagerApp.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:ShopProductManagerApp"
+        mc:Ignorable="d"
+        Title="Вход" 
+        Height="700" 
+        Width="400"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        TextElement.Foreground="{DynamicResource MaterialDesignDarkBackground}">
+
+    <materialDesign:Card UniformCornerRadius="10" Background="{DynamicResource MaterialDesignPaper}">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" MinHeight="61.923"/>
+                <RowDefinition Height="Auto" MinHeight="76.94"/>
+                <RowDefinition Height="Auto" MinHeight="100.94"/>
+                <RowDefinition Height="Auto" MinHeight="103"/>
+                <RowDefinition Height="Auto" MinHeight="32"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="3" Margin="0,0,0,30"
+                HorizontalAlignment="Center" FontSize="24" FontWeight="SemiBold" Width="138"><Run Language="ru-ru" Text="Регестрация"/></TextBlock>
+
+            <TextBox x:Name="UsernameTextBox" Grid.Row="4" Margin="66,0,66,39" FontSize="18"
+                materialDesign:HintAssist.Hint="Имя пользователя" BorderThickness="3" 
+                BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" TextChanged="UsernameTextBox_TextChanged"/>
+
+            <PasswordBox x:Name="PasswordBox" Grid.Row="5" Margin="66,0,65,39" FontSize="18"
+                materialDesign:HintAssist.Hint="Пароль" BorderThickness="3"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+            <Button Content="Регистрация" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="52" Width="170" Background="White" BorderBrush="Black" Click="Button_Click">
+                <Button.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Foreground>
+            </Button>
+            <Button Content="ВХОД" HorizontalAlignment="Center" Margin="0,48,0,0" Grid.Row="7" VerticalAlignment="Top" Height="52" Width="170" Background="White" BorderBrush="Black" Foreground="#FF0F0F10" Click="Button_Click"/>
+        </Grid>
+    </materialDesign:Card>
+</Window>
