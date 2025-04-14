@@ -35,20 +35,28 @@
             <TextBlock Text="Добро пожаловать!" Grid.Row="2" Margin="0,0,0,5"
                 HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Width="274"/>
 
-            <TextBlock Grid.Row="2" Margin="142,42,0,30"
-                HorizontalAlignment="Left" FontSize="24" FontWeight="SemiBold" Grid.RowSpan="2" Width="208" Text="Вход"/>
+            <TextBlock Grid.Row="2" Margin="0,42,0,30"
+                HorizontalAlignment="Center" FontSize="24" FontWeight="SemiBold" Grid.RowSpan="2" Width="208"><Run Language="ru-ru" Text=" Вход в аккаунт"/></TextBlock>
 
-            <TextBox x:Name="UsernameTextBox" Grid.Row="4" Margin="58,0,57,36" FontSize="18"
+            <TextBox x:Name="UsernameTextBox" Grid.Row="4" Margin="20,0,20,10" FontSize="18"
                 materialDesign:HintAssist.Hint="Имя пользователя" BorderThickness="3" 
                 BorderBrush="{DynamicResource MaterialDesignDivider}" 
-                Style="{StaticResource MaterialDesignOutlinedTextBox}" CaretBrush="#FF464646" TextChanged="UsernameTextBox_TextChanged" SelectionOpacity="0.3"/>
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" CaretBrush="#FF464646"/>
 
-            <PasswordBox x:Name="PasswordBox" Grid.Row="5" Margin="58,0,58,39" FontSize="18"
+            <PasswordBox x:Name="PasswordBox" Grid.Row="5" Margin="20,0,20,15" FontSize="18"
                 materialDesign:HintAssist.Hint="Пароль" BorderThickness="3"
                 BorderBrush="{DynamicResource MaterialDesignDivider}"
                 Style="{StaticResource MaterialDesignOutlinedPasswordBox}" CaretBrush="#FF464646"/>
-            <Button Content="ВХОД" HorizontalAlignment="Center" Margin="0,25,0,0" Grid.Row="6" VerticalAlignment="Top" Height="52" Width="170" Background="White" BorderBrush="Black" Foreground="#FFFF1A1A" Click="Button_Click"/>
-            <Button Content="Регистрация" HorizontalAlignment="Center" Margin="0,107,0,0" Grid.Row="6" VerticalAlignment="Top" Height="50" Width="170" Background="White" BorderBrush="Black" Foreground="Red" Grid.RowSpan="2" Click="Button_Click_1"/>
+
+            <Button x:Name="LoginButton" Grid.Row="6" Margin="20,46,20,79" FontWeight="Bold"
+                FontSize="20" Content="ВХОД" Click="LoginButton_Click"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                Style="{StaticResource MaterialDesignRaisedButton}" Background="#FF464646" BorderBrush="#FF464646"/>
+
+            <Button x:Name="OpenRegisterButton" Grid.Row="6" Margin="20,99,20,26" FontWeight="SemiBold"
+                FontSize="20" Content="Создайте аккаунт" Click="OpenRegisterButton_Click"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FF414C4E"/>
         </Grid>
     </materialDesign:Card>
 </Window>

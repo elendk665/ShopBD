@@ -53,20 +53,5 @@ namespace ShopProductManagerApp
             registerWindow.Show();
             this.Close();
         }
-
-        private void UsernameTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
