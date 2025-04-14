@@ -35,9 +35,8 @@
             <TextBlock Text="Добро пожаловать!" Grid.Row="2" Margin="0,0,0,5"
                 HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Width="274"/>
 
-            <TextBlock Grid.Row="2" Margin="0,37,0,5"
-                HorizontalAlignment="Center" FontSize="24" FontWeight="SemiBold" Width="229" Text="Вход пользователя
-                       "/>
+            <TextBlock Grid.Row="2" Margin="142,42,0,30"
+                HorizontalAlignment="Left" FontSize="24" FontWeight="SemiBold" Grid.RowSpan="2" Width="208" Text="Вход"/>
 
             <TextBox x:Name="UsernameTextBox" Grid.Row="4" Margin="58,0,57,36" FontSize="18"
                 materialDesign:HintAssist.Hint="Имя пользователя" BorderThickness="3" 
